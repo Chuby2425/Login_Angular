@@ -52,9 +52,9 @@ export class AuthService {
         this.afAuth.authState.subscribe((user) => {
           if (user) {
             this.messageService.add({
-              severity: 'success',
+              severity: '¡¡¡Success!!!',
               summary: 'Welcome',
-              detail: ':D',
+              detail: 'Access Completed:D',
             });
             this.router.navigate(['home']);
           }
@@ -62,7 +62,7 @@ export class AuthService {
       })
       .catch(() => {
         this.messageService.add({
-          severity: 'error',
+          severity: 'Error',
           summary: 'Error',
           detail: 'Wrong credentials',
         });
